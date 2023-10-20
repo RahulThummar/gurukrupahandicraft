@@ -28,7 +28,7 @@ const Header = () => {
         <Flex className="flex items-center justify-between h-full">
           <Link to="/">
             <div>
-               <p style={{fontWeight:"600", fontSize:"21px"}}> Gurukrupa Handicraft </p>
+               <p style={{fontWeight:"600", fontSize:"21px"}}> gbuh Handicraft </p>
             </div>
           </Link>
           <div>

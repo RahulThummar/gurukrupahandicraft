@@ -40,7 +40,7 @@ const Layout = () => {
       <div class="loader-container">
         <div class="loader">
       <div class="loader-ball"></div>
-      <div class="company-name">Rahul Thummar</div>
+      <div class="company-name">Gurukrupa Handicraft</div>
     </div>
   </div>
   :

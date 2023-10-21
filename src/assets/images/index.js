@@ -20,7 +20,7 @@ import bestSellerThree from "./products/bestSeller/bestSellerThree.webp";
 import bestSellerFour from "./products/bestSeller/bestSellerFour.webp";
 
 // Special Offers
-import spfOne from "./products/specialOffer/spfOne.webp";
+import spf1 from "./products/specialOffer/spf1.webp";
 import spfTwo from "./products/specialOffer/spfTwo.webp";
 import spfThree from "./products/specialOffer/spfThree.webp";
 import spfFour from "./products/specialOffer/spfFour.webp";
@@ -30,8 +30,25 @@ import productOfTheYear from "./products/productOfTheYear.webp";
 // ============== Products End here ======================
 import paymentCard from "./payment.png";
 import emptyCart from "../images/emptyCart.png";
+// prodyucts
+import p1001 from "./products/specialOffer/p1001.webp";
+import p1002 from "./products/specialOffer/p1002.jpg";
+import p1003 from "./products/specialOffer/p1003.jpg";
+import p1004 from "./products/specialOffer/p1004.jpg";
+import pp1004 from "./products/specialOffer/pp1004.jpg";
 
 export {
+  // product list
+  p1001,
+  p1002,
+  p1003,  
+  p1004,  
+  pp1004,  
+  
+  
+  
+  // -------------
+
   logo,
   logoLight,
   bannerImgOne,
@@ -54,7 +71,7 @@ export {
   bestSellerFour,
 
   // Sprcial Offers
-  spfOne,
+  spf1,
   spfTwo,
   spfThree,
   spfFour,

@@ -1,25 +1,23 @@
 import React from "react";
 import { SplOfferData } from "../../../constants";
 
-const ProductsOnSale = () => {
+const ProductsOnSale = (props) => {
+  console.log(props,"ppppppptrd")
   return (
     <div>
-      <h3 className="font-titleFont text-xl font-semibold mb-6 underline underline-offset-4 decoration-[1px]">
+      {/* <h3 className="font-titleFont text-xl font-semibold mb-6 underline underline-offset-4 decoration-[1px]">
         Products on sale
-      </h3>
+      </h3> */}
       <div className="flex flex-col gap-2">
-        {SplOfferData.map((item) => (
+        {props.productInfo.img.map((item) => (
           <div
             key={item._id}
             className="flex items-center gap-4 border-b-[1px] border-b-gray-300 py-2"
           >
             <div>
-              <img className="w-24" src={item.img} alt={item.img} />
+              <img className="w-24" src={item} alt={item} />
             </div>
-            <div className="flex flex-col gap-2 font-titleFont">
-              <p className="text-base font-medium">{item.productName}</p>
-              <p className="text-sm font-semibold">₹{item.price}</p>
-            </div>
+             
           </div>
         ))}
       </div>

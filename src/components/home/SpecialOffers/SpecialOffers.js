@@ -2,7 +2,7 @@ import React from "react";
 import Heading from "../Products/Heading";
 import Product from "../Products/Product";
 import {
-  spfOne,
+  spf1,
   spfTwo,
   spfThree,
   spfFour,
@@ -15,7 +15,7 @@ const SpecialOffers = () => {
       <div className="w-full grid grid-cols-1 md:grid-cols-2 lgl:grid-cols-3 xl:grid-cols-4 gap-10">
         <Product
           _id="1101"
-          img={spfOne}
+          img={spf1}
           productName="Supdu"
           price="150.00"
           color="Green"

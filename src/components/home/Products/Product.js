@@ -8,10 +8,11 @@ import Badge from "./Badge";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../../redux/orebiSlice";
+import { paginationItems } from "../../../constants";
 
 const Product = (props) => {
   const dispatch = useDispatch();
-  const _id = props.productName;
+  const _id = props._id;
   const idString = (_id) => {
     return String(_id).toLowerCase().split(" ").join("");
   };
@@ -19,10 +20,15 @@ const Product = (props) => {
 
   const navigate = useNavigate();
   const productItem = props;
+
+  console.log(paginationItems[3],"ib")
+
   const handleProductDetails = () => {
+    const filteredData= paginationItems.filter((a)=>a._id===_id)
     navigate(`/product/${rootId}`, {
+
       state: {
-        item: productItem,
+        item: filteredData,
       },
     });
   };

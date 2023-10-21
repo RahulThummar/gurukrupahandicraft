@@ -9,13 +9,14 @@ import { useLocation } from "react-router-dom";
 const items = paginationItems;
 console.log(items, "items")
 function Items({ currentItems }) {
+  console.log(currentItems[3],"====")
   return (
     <>
       {currentItems.map((item) => (
-        <div key={item._id} className="w-full">
+        <div key={item._id} className="w-full cover-fill">
           <Product
             _id={item._id}
-            img={item.img}
+            img={item.img[0]}
             productName={item.productName}
             price={item.price}
             color={item.color}

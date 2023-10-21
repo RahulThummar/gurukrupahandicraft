@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 import Product from "../../home/Products/Product";
 import { paginationItems } from "../../../constants";
-import { FaSearch } from "react-icons/fa";
-import { GoTriangleDown } from "react-icons/go";
+import { FaSearch } from "react-icons/fa"; 
 import { useLocation } from "react-router-dom";
 
 const items = paginationItems;
@@ -80,7 +79,7 @@ const Pagination = ({ itemsPerPage: defaultItemsPerPage }) => {
 
   return (
   <div>
-  <div className="flex items-center gap-4 justify-between w-full mb-4 flex-col md:flex-row">
+  <div className="flex flex-col md:flex-row items-center gap-4 justify-between w-full mb-4">
     <div className="w-full md:w-[60%] mb-4 md:mb-0">
       <div className="relative w-full md:w-[400px] h-[50px] bg-bg-white flex items-center gap-2 text-base text-primeColor bg-white flex items-center gap-2 justify-between px-6 rounded-xl">
         <input
@@ -94,39 +93,37 @@ const Pagination = ({ itemsPerPage: defaultItemsPerPage }) => {
       </div>
     </div>
 
-    <div className="flex flex-col md:flex-row items-center gap-2 text-base text-[#767676] relative">
-      <label className="block md:mr-2">Sort by:</label>
-      <select
-        id="countries"
-        className="w-full md:w-48 border-[1px] border-gray-200 py-1 px-4 cursor-pointer text-primeColor text-base block dark:placeholder-gray-400 appearance-none focus-within:outline-none focus-visible:border-primeColor"
-        onChange={handleSearch}
-      >
-        <option value="">- Select Product -</option>
-        <option value="Clock" selected={searchTerm === "Clock"}>Wall Clock</option>
-        <option value="Toran" selected={searchTerm==="Toran"}>Toran</option>
-        <option value="Bajoth" selected={searchTerm==="Bajoth"}>Bajoth</option>
-      </select>
-      <span className="absolute text-sm right-2 md:right-4 top-2.5">
-        <GoTriangleDown />
-      </span>
-    </div>
+    <div className="flex items-center gap-4">
+      <div className="flex flex-col text-base text-[#767676] relative">
+        <label className="block md:mr-2">Sort by:</label>
+        <select
+          id="countries"
+          className="w-full md:w-48 border-[1px] border-gray-200 py-1 px-4 cursor-pointer text-primeColor text-base block dark:placeholder-gray-400 appearance-none focus-within:outline-none focus-visible:border-primeColor"
+          onChange={handleSearch}
+        >
+          <option value="">- Select Product -</option>
+          <option value="Clock" selected={searchTerm === "Clock"}>Wall Clock</option>
+          <option value="Toran" selected={searchTerm==="Toran"}>Toran</option>
+          <option value="Bajoth" selected={searchTerm==="Bajoth"}>Bajoth</option>
+        </select>
+        
+      </div>
 
-    <div className="flex flex-col md:flex-row items-center gap-2 text-base text-[#767676] relative">
-      <label className="block md:mr-2">Show:</label>
-      <select
-        onChange={handleItemsPerPageChange}
-        value={itemsPerPage}
-        id="countries"
-        className="w-full md:w-16 border-[1px] border-gray-200 py-1 px-4 cursor-pointer text-primeColor text-base block dark:placeholder-gray-400 appearance-none focus-within:outline-none focus-visible:border-primeColor"
-      >
-        <option value="12">12</option>
-        <option value="24">24</option>
-        <option value="36">36</option>
-        <option value="48">48</option>
-      </select>
-      <span className="absolute text-sm right-3 top-2.5">
-        <GoTriangleDown />
-      </span>
+      <div className="flex flex-col text-base text-[#767676] relative">
+        <label className="block md:mr-2">Show:</label>
+        <select
+          onChange={handleItemsPerPageChange}
+          value={itemsPerPage}
+          id="countries"
+          className="w-full md:w-16 border-[1px] border-gray-200 py-1 px-4 cursor-pointer text-primeColor text-base block dark:placeholder-gray-400 appearance-none focus-within:outline-none focus-visible:border-primeColor"
+        >
+          <option value="12">12</option>
+          <option value="24">24</option>
+          <option value="36">36</option>
+          <option value="48">48</option>
+        </select>
+        
+      </div>
     </div>
   </div>
 
@@ -159,6 +156,7 @@ const Pagination = ({ itemsPerPage: defaultItemsPerPage }) => {
       No product found.
     </p>}
 </div>
+
 
   );
 };

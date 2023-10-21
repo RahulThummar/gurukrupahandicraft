@@ -104,5 +104,11 @@ nav .active li {
 }
 /* ================= loader end ============= */
 
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 
 /* ============= NavLink active End here ================ */

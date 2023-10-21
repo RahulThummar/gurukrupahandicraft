@@ -8,6 +8,7 @@ import {
 } from "../../redux/orebiSlice";
 
 const ItemCard = ({ item }) => {
+  console.log(item, "cardi")
   const dispatch = useDispatch();
   return (
     <div className="w-full grid grid-cols-5 mb-4 border py-2">
@@ -16,7 +17,7 @@ const ItemCard = ({ item }) => {
           onClick={() => dispatch(deleteItem(item._id))}
           className="text-primeColor hover:text-red-500 duration-300 cursor-pointer"
         />
-        <img className="w-32 h-32" src={item.image} alt="productImage" />
+        <img className="w-32 h-32" src={item.image[0]} alt="productImage" />
         <h1 className="font-titleFont font-semibold">{item.name}</h1>
       </div>
       <div className="col-span-5 mdl:col-span-3 flex items-center justify-between py-4 mdl:py-0 px-4 mdl:px-0 gap-6 mdl:gap-0">

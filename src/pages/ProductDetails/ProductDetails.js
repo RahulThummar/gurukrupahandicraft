@@ -11,7 +11,9 @@ const ProductDetails = () => {
   const { _id } = useParams(); 
   const [prevLocation, setPrevLocation] = useState("");
   const [productInfo, setProductInfo] = useState([]);
-  const filteredData= paginationItems.filter((a)=>a._id==_id)
+  const filteredData = paginationItems.filter((a) => a._id == _id)
+  
+  console.log(location.state.item, "location.state.item")
 
   useEffect(() => {
     if (location.state) {

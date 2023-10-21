@@ -50,7 +50,7 @@ const Product = (props) => {
                     _id: props._id,
                     name: props.productName,
                     quantity: 1,
-                    image: props.img,
+                    image: [props.img],
                     badge: props.badge,
                     price: props.price,
                     colors: props.color,

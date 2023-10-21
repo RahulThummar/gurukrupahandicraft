@@ -43,6 +43,11 @@ const HeaderBottom = () => {
   const handleChangeproduct = (item) => {
     navigate("/shop", { state: { item: item } } )                      
   }
+  const handlenavigate = (item) => {
+  navigate(`/product/${item._id}`, {state: { item: [item] }, } ) 
+  setShowSearchBar(true) 
+  setSearchQuery("")                  
+  }
 
   return (
     <div className="w-full bg-[#F5F5F3] relative">
@@ -93,19 +98,7 @@ const HeaderBottom = () => {
                   filteredProducts.map((item) => (
                     <div
                       onClick={() =>
-                        navigate(
-                          `/product/${item.productName
-                            .toLowerCase()
-                            .split(" ")
-                            .join("")}`,
-                          {
-                            state: {
-                              item: item,
-                            },
-                          }
-                        ) &
-                        setShowSearchBar(true) &
-                        setSearchQuery("")
+                      handlenavigate(item)
                       }
                       key={item._id}
                       className="max-w-[600px] h-28 bg-gray-100 mb-3 flex items-center gap-3"

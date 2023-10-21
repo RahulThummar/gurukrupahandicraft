@@ -36,6 +36,11 @@ import p1002 from "./products/specialOffer/p1002.jpg";
 import p1003 from "./products/specialOffer/p1003.jpg";
 import p1004 from "./products/specialOffer/p1004.jpg";
 import pp1004 from "./products/specialOffer/pp1004.jpg";
+import p1005 from "./products/specialOffer/p1005.jpg";
+import pp1005 from "./products/specialOffer/pp1005.jpg";
+import ppp1005 from "./products/specialOffer/ppp1005.jpg";
+import pppp1005 from "./products/specialOffer/pppp1005.jpg";
+
 
 export {
   // product list
@@ -44,6 +49,11 @@ export {
   p1003,  
   p1004,  
   pp1004,  
+  p1005,  
+  pp1005,  
+  ppp1005,  
+  pppp1005,  
+
   
   
   

@@ -33,6 +33,7 @@ import emptyCart from "../images/emptyCart.png";
 // prodyucts
 import p1001 from "./products/specialOffer/p1001.webp";
 import p1002 from "./products/specialOffer/p1002.jpg";
+import pp1002 from "./products/specialOffer/pp1002.jpg";
 import p1003 from "./products/specialOffer/p1003.jpg";
 import p1004 from "./products/specialOffer/p1004.jpg";
 import pp1004 from "./products/specialOffer/pp1004.jpg";
@@ -47,6 +48,7 @@ export {
   // product list
   p1001,
   p1002,
+  pp1002,
   p1003,  
   p1004,  
   pp1004,  

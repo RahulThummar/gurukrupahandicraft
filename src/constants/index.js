@@ -2,6 +2,7 @@ import {
   spf1,
   p1001,
   p1002,
+  pp1002,
   p1003,
   p1004,
   pp1004,
@@ -98,7 +99,7 @@ export const paginationItems = [
   },
   {
     _id: 1002,
-    img: [p1002],
+    img: [p1002,pp1002],
     productName: "Topli",
     price: "150.00",
     color: "Mixed",

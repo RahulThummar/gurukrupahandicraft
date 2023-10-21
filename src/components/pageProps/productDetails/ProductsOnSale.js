@@ -29,7 +29,7 @@ const ProductsOnSale = (props) => {
             onClick={()=>openModal(item)}
           >
             <div>
-              <img className="w-24" src={item} alt={item} />
+              <img className="w-24 cursor-pointer" src={item} alt={item} />
             </div>
              
           </div>

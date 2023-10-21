@@ -47,7 +47,7 @@ const ProductDetails = () => {
           
           <div className="h-full xl:col-span-2" onClick={()=>openModal()}>
             <img
-              className="w-full h-full object-fill"
+              className="w-full h-full object-fill cursor-pointer"
               src={productInfo[0].img[0]}
               alt={productInfo[0].img[0]}
             />

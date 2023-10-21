@@ -60,7 +60,7 @@ const ProductDetails = () => {
       
        {isModalOpen && (
         <div
-          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center"
+          className="fixed top-10 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center"
           onClick={closeModal}
         >
           <div className="w-[450px] h-[500px] p-4">

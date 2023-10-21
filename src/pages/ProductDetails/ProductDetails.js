@@ -11,9 +11,7 @@ const ProductDetails = () => {
   const { _id } = useParams(); 
   const [prevLocation, setPrevLocation] = useState("");
   const [productInfo, setProductInfo] = useState([]);
-  const filteredData = paginationItems.filter((a) => a._id == _id)
-  
-  console.log(location.state.item, "location.state.item")
+  const filteredData= paginationItems.filter((a)=>a._id==_id)
 
   useEffect(() => {
     if (location.state) {
@@ -23,6 +21,17 @@ const ProductDetails = () => {
     }
     setPrevLocation(location.pathname);
   }, [location]);
+
+   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
 
   return (
     <div className="w-full mx-auto border-b-[1px] border-b-gray-300">
@@ -36,7 +45,7 @@ const ProductDetails = () => {
             <ProductsOnSale productInfo={productInfo[0]} />
           </div>
           
-          <div className="h-full xl:col-span-2">
+          <div className="h-full xl:col-span-2" onClick={()=>openModal()}>
             <img
               className="w-full h-full object-fill"
               src={productInfo[0].img[0]}
@@ -47,7 +56,23 @@ const ProductDetails = () => {
             <ProductInfo productInfo={productInfo[0]} />
           </div>
         </div>
-      </div>}
+        </div>}
+      
+       {isModalOpen && (
+        <div
+          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center"
+          onClick={closeModal}
+        >
+          <div className="w-[450px] h-[500px] p-4">
+            <img
+              className="w-full h-full object-fill cursor-pointer"
+              src={productInfo[0].img[0]}
+              alt={productInfo[0].img[0]}
+            />
+          </div>
+        </div>
+      )}
+
     </div>
   );
 };

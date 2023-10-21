@@ -40,6 +40,7 @@ import p1005 from "./products/specialOffer/p1005.jpg";
 import pp1005 from "./products/specialOffer/pp1005.jpg";
 import ppp1005 from "./products/specialOffer/ppp1005.jpg";
 import pppp1005 from "./products/specialOffer/pppp1005.jpg";
+import p1006 from "./products/specialOffer/p1006.jpg";
 
 
 export {
@@ -53,6 +54,7 @@ export {
   pp1005,  
   ppp1005,  
   pppp1005,  
+  p1006,  
 
   
   

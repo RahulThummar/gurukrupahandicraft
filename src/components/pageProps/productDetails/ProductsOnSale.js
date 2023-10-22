@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { SplOfferData } from "../../../constants";
 
-const ProductsOnSale = (props) => {
-  console.log(props, "ppppppptrd")
-  
+const ProductsOnSale = (props) => { 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [imgPath, setImgPath] = useState(null);
 

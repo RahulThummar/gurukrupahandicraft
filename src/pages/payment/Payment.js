@@ -23,7 +23,7 @@
 
       if (location.state && products.length > 0) { 
           const productLines = location.state.item.map(product => `id:${product._id} - Name: ${product.name} - Quantity: ${product.quantity} - Price: ₹${product.price}`);
-          const result = productLines.join('  |||  ');
+          const result = productLines.join('  |||  \n');
           setMessages(result)
         } else {
          navigate("/") 
@@ -75,10 +75,6 @@
         dispatch(resetCart())
       }
     };
-
-   
-
-
     return (
       <div className="max-w-container mx-auto px-4">
         <Breadcrumbs title="Payment gateway" />

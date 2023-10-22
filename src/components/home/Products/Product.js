@@ -21,8 +21,6 @@ const Product = (props) => {
   const navigate = useNavigate();
   const productItem = props;
 
-  console.log(props._id,"55555555ib")
-
   const handleProductDetails = () => {
     const filteredData= paginationItems.filter((a)=>a._id==_id)
     navigate(`/product/${rootId}`, {

@@ -5,10 +5,8 @@ import { paginationItems } from "../../../constants";
 import { FaSearch } from "react-icons/fa"; 
 import { useLocation } from "react-router-dom";
 
-const items = paginationItems;
-console.log(items, "items")
-function Items({ currentItems }) {
-  console.log(currentItems[3],"====")
+const items = paginationItems; 
+function Items({ currentItems }) { 
   return (
     <>
       {currentItems.map((item) => (
@@ -35,22 +33,16 @@ const Pagination = ({ itemsPerPage: defaultItemsPerPage }) => {
   const [itemOffset, setItemOffset] = useState(0);
 
   useEffect(() => {
-    if (location.state?.item) {
-       console.log("object")
-      
+    if (location.state?.item) { 
        setSearchTerm(location.state.item);
      }
   }, [location.state]);
 
   const handleSearch = (event) => {
     setSearchTerm(event.target.value);
-    setItemOffset(0); // Reset offset when search term changes
+    setItemOffset(0);  
   };
-
-  console.log(searchTerm, "====searchTerm")
-  console.log(typeof(searchTerm), "====searchTerm")
-
-
+ 
   const filteredItems = items.filter((item) => {
     const productName = item.productName ? item.productName.toLowerCase() : '';
     const des = item.des ? item.des.toLowerCase() : '';

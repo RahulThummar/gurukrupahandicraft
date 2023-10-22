@@ -35,7 +35,7 @@ const Pagination = ({ itemsPerPage: defaultItemsPerPage }) => {
   const [itemOffset, setItemOffset] = useState(0);
 
   useEffect(() => {
-    if (location.state.item) {
+    if (location.state?.item) {
        console.log("object")
       
        setSearchTerm(location.state.item);

@@ -68,8 +68,8 @@ const ProductDetails = () => {
         
         :
       
-        <div className="flex items-center justify-center min-h-screen">
-  <div className="max-w-[500px] p-4 py-8 bg-white flex gap-4 flex-col items-center rounded-md shadow-lg">
+<div className="flex items-center justify-center m-10 ">
+  <div className="max-w-[500px] p-4 py-5 bg-white flex gap-4 flex-col items-center rounded-md shadow-lg">
     <h1 className="font-titleFont text-xl font-bold uppercase">
       No Product Found
     </h1>
@@ -84,6 +84,8 @@ const ProductDetails = () => {
     </Link>
   </div>
 </div>
+
+
 
       }
 

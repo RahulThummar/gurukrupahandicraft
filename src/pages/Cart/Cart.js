@@ -34,8 +34,7 @@ const Cart = () => {
 
   const handleClickProceedCheckOut = () => {
       navigate("/paymentgateway", { state: { item: products } } )  
-  }
-console.log(products,"products")
+  } 
   return (
     <div className="max-w-container mx-auto px-4">
       <Breadcrumbs title="Cart" />

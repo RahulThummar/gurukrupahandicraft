@@ -21,8 +21,8 @@
 
     useEffect(() => {
 
-        if (location.state && products.length>0) {  
-          const productLines = location.state.item.map(product => `${product.name} - Quantity: ${product.quantity} - Price: ₹${product.price}`);
+      if (location.state && products.length > 0) { 
+          const productLines = location.state.item.map(product => `id:${product._id} - Name: ${product.name} - Quantity: ${product.quantity} - Price: ₹${product.price}`);
           const result = productLines.join('  |||  ');
           setMessages(result)
         } else {

@@ -94,6 +94,10 @@ const ProductDetails = () => {
         <div
           className="fixed top-10 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center"
           onClick={closeModal}
+           style={{
+      borderRadius: '10px', 
+      boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)', 
+    }}
         >
           <div className="w-[450px] h-[500px] p-4">
             <img

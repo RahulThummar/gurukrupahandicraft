@@ -3,10 +3,13 @@
   import { Link, useLocation, useNavigate } from "react-router-dom";
   import Breadcrumbs from "../../components/pageProps/Breadcrumbs";
   import { resetCart } from "../../redux/orebiSlice";
-  import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import emailjs from '@emailjs/browser';
+import { useRef } from "react";
   
 
   const Payment = () => {
+    const payRef = useRef()
     const location = useLocation()
     const dispatch = useDispatch();
     const navigate = useNavigate()
@@ -48,7 +51,9 @@
     const PhoneNumberValidation = (phoneNumber) => { 
     const phoneRegex = /^[0-9]{10}$/; 
     return phoneRegex.test(phoneNumber);
-  };
+    };
+    
+    console.log(payRef.current, "uyhbyjyh")
 
 
     const handlePost = (e) => {
@@ -67,12 +72,23 @@
         setErrMessages("Enter your Messages");
       }
       if (clientName && phone && PhoneNumberValidation(phone) && messages) {
-        setSuccessMsg(
+         emailjs.sendForm('service_ginaaep', 'template_olkcxsm', payRef.current, 'J2HXXQB0HemuGxCyY')
+      .then((result) => {
+         setSuccessMsg(
           `Thank you dear ${clientName}, Your messages has been received successfully. Futher details will sent to you by your contact number at ${phone}.`
-        );
-        const mailtoLink = `mailto:rahul.thummar327@gmail.com?subject=Order Form Submission&body=Client Name: ${clientName}%0D%0APhone: ${phone}%0D%0AProducts: ${messages}`;
-        window.location.href = mailtoLink;
+         );
         dispatch(resetCart())
+        
+      }, (error) => {
+          console.log(error.text);
+      });
+
+        // setSuccessMsg(
+        //   `Thank you dear ${clientName}, Your messages has been received successfully. Futher details will sent to you by your contact number at ${phone}.`
+        // );
+        // const mailtoLink = `mailto:rahul.thummar327@gmail.com?subject=Order Form Submission&body=Client Name: ${clientName}%0D%0APhone: ${phone}%0D%0AProducts: ${messages}`;
+        // window.location.href = mailtoLink;
+        // dispatch(resetCart())
       }
     };
     return (
@@ -85,7 +101,7 @@
         {successMsg ? (
           <p className="pb-20 w-96 font-medium text-green-500">{successMsg}</p>
         ) : (
-          <form className="pb-20">
+                <form ref={payRef} className="pb-20">
             <h1 className="font-titleFont font-semibold text-3xl">
               Fill up a form for place the order 
             </h1>
@@ -94,7 +110,8 @@
                 <p className="text-base font-titleFont font-semibold px-2">
                   Name
                 </p>
-                  <input
+                      <input
+                        name="user_name"
                   style={{marginTop:"5px"}}
                   onChange={handleName}
                   value={clientName}
@@ -113,7 +130,8 @@
                 <p className="text-base font-titleFont font-semibold px-2">
                   Contact Number
                 </p>
-                  <input
+                      <input
+                        name="user_phone"
                   style={{marginTop:"5px"}}
                   onChange={handlePhone}
                   value={phone}
@@ -132,7 +150,8 @@
                 <p className="text-base font-titleFont font-semibold px-2">
                   Products
                 </p>
-                  <textarea
+                      <textarea
+                                         name="message"
                   style={{ marginTop: "5px" }}
                   onChange={handleMessages}
                   value={messages}

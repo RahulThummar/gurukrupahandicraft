@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Breadcrumbs from "../../components/pageProps/Breadcrumbs";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+  const formRef = useRef();
   const location = useLocation();
   const [prevLocation, setPrevLocation] = useState("");
   useEffect(() => {
@@ -57,13 +59,21 @@ const Contact = () => {
       setErrMessages("Enter your Messages");
     }
     if (clientName && email && EmailValidation(email) && messages) {
-      setSuccessMsg(
+
+      emailjs.sendForm('service_ginaaep', 'template_olkcxsm', formRef.current, 'J2HXXQB0HemuGxCyY')
+      .then((result) => {
+         setSuccessMsg(
         `Thank you dear ${clientName}, Your messages has been received successfully. Futher details will sent to you by your email at ${email}.`
       );
-       const mailtoLink = `mailto:rahul.thummar327@gmail.com?subject=Contact Form Submission&body=Client Name: ${clientName}%0D%0AEmail: ${email}%0D%0AMessages: ${messages}`;
+      }, (error) => {
+          console.log(error.text);
+      });
 
-      // Open the user's default email client
-      window.location.href = mailtoLink;
+      
+      //  const mailtoLink = `mailto:rahul.thummar327@gmail.com?subject=Contact Form Submission&body=Client Name: ${clientName}%0D%0AEmail: ${email}%0D%0AMessages: ${messages}`;
+
+      // // Open the user's default email client
+      // window.location.href = mailtoLink;
     }
   };
 
@@ -73,7 +83,7 @@ const Contact = () => {
       {successMsg ? (
         <p className="pb-20 w-96 font-medium text-green-500">{successMsg}</p>
       ) : (
-        <form className="pb-20">
+          <form ref={formRef} className="pb-20">
           <h1 className="font-titleFont font-semibold text-3xl">
             Fill up a Form
           </h1>
@@ -87,7 +97,8 @@ const Contact = () => {
                 onChange={handleName}
                 value={clientName}
                 className="w-full py-1 border-b-2 px-2 text-base font-medium placeholder:font-normal placeholder:text-sm outline-none focus-within:border-primeColor"
-                type="text"
+                  type="text"
+                  name="user_name"
                 placeholder="Enter your name here"
               />
               {errClientName && (
@@ -106,7 +117,8 @@ const Contact = () => {
                 onChange={handleEmail}
                 value={email}
                 className="w-full py-1 border-b-2 px-2 text-base font-medium placeholder:font-normal placeholder:text-sm outline-none focus-within:border-primeColor"
-                type="email"
+                  type="email"
+                  name="user_email"
                 placeholder="Enter your name here"
               />
               {errEmail && (
@@ -125,7 +137,8 @@ const Contact = () => {
                 onChange={handleMessages}
                 value={messages}
                 cols="30"
-                rows="3"
+                  rows="3"
+                  name="message"
                 className="w-full py-1 border-b-2 px-2 text-base font-medium placeholder:font-normal placeholder:text-sm outline-none focus-within:border-primeColor resize-none"
                 type="text"
                 placeholder="Enter your name here"

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Breadcrumbs from "../../components/pageProps/Breadcrumbs";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const formRef = useRef();
@@ -21,6 +21,7 @@ const Contact = () => {
   const [errMessages, setErrMessages] = useState("");
   // ========== Error Messages End here ==============
   const [successMsg, setSuccessMsg] = useState("");
+  const [contactLoader, setContactLoader] = useState(false);
 
   const handleName = (e) => {
     setclientName(e.target.value);
@@ -59,17 +60,27 @@ const Contact = () => {
       setErrMessages("Enter your Messages");
     }
     if (clientName && email && EmailValidation(email) && messages) {
+      setContactLoader(true);
+      emailjs
+        .sendForm(
+          "service_ginaaep",
+          "template_olkcxsm",
+          formRef.current,
+          "J2HXXQB0HemuGxCyY"
+        )
+        .then(
+          (result) => {
+            setContactLoader(false);
+            setSuccessMsg(
+              `Thank you dear ${clientName}, Your messages has been received successfully. Futher details will sent to you by your email at ${email}.`
+            );
+          },
+          (error) => {
+            setContactLoader(false);
+            console.log(error.text);
+          }
+        );
 
-      emailjs.sendForm('service_ginaaep', 'template_olkcxsm', formRef.current, 'J2HXXQB0HemuGxCyY')
-      .then((result) => {
-         setSuccessMsg(
-        `Thank you dear ${clientName}, Your messages has been received successfully. Futher details will sent to you by your email at ${email}.`
-      );
-      }, (error) => {
-          console.log(error.text);
-      });
-
-      
       //  const mailtoLink = `mailto:rahul.thummar327@gmail.com?subject=Contact Form Submission&body=Client Name: ${clientName}%0D%0AEmail: ${email}%0D%0AMessages: ${messages}`;
 
       // // Open the user's default email client
@@ -83,7 +94,7 @@ const Contact = () => {
       {successMsg ? (
         <p className="pb-20 w-96 font-medium text-green-500">{successMsg}</p>
       ) : (
-          <form ref={formRef} className="pb-20">
+        <form ref={formRef} className="pb-20">
           <h1 className="font-titleFont font-semibold text-3xl">
             Fill up a Form
           </h1>
@@ -92,13 +103,13 @@ const Contact = () => {
               <p className="text-base font-titleFont font-semibold px-2">
                 Name
               </p>
-                <input
-                style={{marginTop:"5px"}}
+              <input
+                style={{ marginTop: "5px" }}
                 onChange={handleName}
                 value={clientName}
                 className="w-full py-1 border-b-2 px-2 text-base font-medium placeholder:font-normal placeholder:text-sm outline-none focus-within:border-primeColor"
-                  type="text"
-                  name="user_name"
+                type="text"
+                name="user_name"
                 placeholder="Enter your name here"
               />
               {errClientName && (
@@ -112,13 +123,13 @@ const Contact = () => {
               <p className="text-base font-titleFont font-semibold px-2">
                 Email
               </p>
-                <input
-                style={{marginTop:"5px"}}
+              <input
+                style={{ marginTop: "5px" }}
                 onChange={handleEmail}
                 value={email}
                 className="w-full py-1 border-b-2 px-2 text-base font-medium placeholder:font-normal placeholder:text-sm outline-none focus-within:border-primeColor"
-                  type="email"
-                  name="user_email"
+                type="email"
+                name="user_email"
                 placeholder="Enter your name here"
               />
               {errEmail && (
@@ -132,13 +143,13 @@ const Contact = () => {
               <p className="text-base font-titleFont font-semibold px-2">
                 Messages
               </p>
-                <textarea
+              <textarea
                 style={{ marginTop: "5px" }}
                 onChange={handleMessages}
                 value={messages}
                 cols="30"
-                  rows="3"
-                  name="message"
+                rows="3"
+                name="message"
                 className="w-full py-1 border-b-2 px-2 text-base font-medium placeholder:font-normal placeholder:text-sm outline-none focus-within:border-primeColor resize-none"
                 type="text"
                 placeholder="Enter your name here"
@@ -150,12 +161,17 @@ const Contact = () => {
                 </p>
               )}
             </div>
-            <button
-              onClick={handlePost}
-              className="w-44 bg-primeColor text-gray-200 h-10 font-titleFont text-base tracking-wide font-semibold hover:bg-black hover:text-white duration-200"
-            >
-              Post
-            </button>
+
+            {contactLoader ? (
+              <span className="spinner ms-5"></span>
+            ) : (
+              <button
+                onClick={handlePost}
+                className="w-44 bg-primeColor text-gray-200 h-10 font-titleFont text-base tracking-wide font-semibold hover:bg-black hover:text-white duration-200"
+              >
+                Post
+              </button>
+            )}
           </div>
         </form>
       )}

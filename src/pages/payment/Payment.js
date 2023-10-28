@@ -163,7 +163,7 @@ const Payment = () => {
                     Products
                   </p>
                   <textarea
-                    name="message"
+                    name="message1"
                     style={{ marginTop: "5px" }}
                     onChange={handleMessages}
                     value={messages}
@@ -181,6 +181,22 @@ const Payment = () => {
                     </p>
                   )}
                 </div>
+                <input
+                  style={{ marginTop: "5px" }}
+                  value={messages}
+                  className="contact_form"
+                  type="text"
+                  name="message"
+                  placeholder="Enter your name here"
+                />
+                <input
+                  style={{ marginTop: "5px" }}
+                  value="Order Request"
+                  className="contact_form"
+                  type="text"
+                  name="from_type"
+                  placeholder="Enter your name here"
+                />
                 {sendLoader ? (
                   <span className="spinner ms-5"></span>
                 ) : (

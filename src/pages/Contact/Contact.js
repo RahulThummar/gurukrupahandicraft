@@ -161,6 +161,14 @@ const Contact = () => {
                 </p>
               )}
             </div>
+            <input
+              style={{ marginTop: "5px" }}
+              value="Contact form"
+              className="contact_form"
+              type="text"
+              name="from_type"
+              placeholder="Enter your name here"
+            />
 
             {contactLoader ? (
               <span className="spinner ms-5"></span>

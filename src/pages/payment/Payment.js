@@ -55,8 +55,6 @@ const Payment = () => {
     return phoneRegex.test(phoneNumber);
   };
 
-  console.log(payRef.current, "uyhbyjyh");
-
   const handlePost = (e) => {
     e.preventDefault();
     if (!clientName) {

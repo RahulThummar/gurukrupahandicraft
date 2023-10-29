@@ -141,7 +141,7 @@ body {
 }
 
 .center-div {
-  width: 100%; /* Set a percentage width for responsiveness */
+  width: 80%; /* Set a percentage width for responsiveness */
   max-width: 1100px; /* Set the maximum width */
   height: 200px;
   background-color: transparent;
@@ -162,9 +162,9 @@ svg {
 svg text {
   animation: stroke 5s infinite alternate;
   stroke-width: 2;
+  letter-spacing: 2px;
   stroke: #C4C4C4;
-  letter-spacing: 3px;
-  font-size: 45px; /* Set font size using viewport width for responsiveness */
+  font-size: 5vw; /* Set font size using viewport width for responsiveness */
 }
 
 @keyframes stroke {

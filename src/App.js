@@ -25,25 +25,25 @@ import Payment from "./pages/payment/Payment";
 import ProductDetails from "./pages/ProductDetails/ProductDetails";
 import Shop from "./pages/Shop/Shop";
 
-const Layout = () => { 
+const Layout = () => {
   const [loder, setLoder] = useState(true);
 
-  useEffect(() => { 
+  useEffect(() => {
     const timeoutId = setTimeout(() => {
-      setLoder(false);
-    }, 1000); 
+      // setLoder(false);
+    }, 1000);
     return () => clearTimeout(timeoutId);
-  }, []); 
+  }, []);
 
-  return (
-          loder?
-      <div class="loader-container">
-        <div class="loader">
-      <div class="loader-ball"></div>
-      <div class="company-name">Gurukrupa Handicraft</div>
+  return loder ? (
+    <div class="wrapper">
+      <svg>
+        <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+          Gurukrupa Handicraft
+        </text>
+      </svg>
     </div>
-  </div>
-  :
+  ) : (
     <div>
       <Header />
       <HeaderBottom />
@@ -51,7 +51,7 @@ const Layout = () => {
       <ScrollRestoration />
       <Outlet />
       <Footer /> 4
-</div>
+    </div>
   );
 };
 const router = createBrowserRouter(

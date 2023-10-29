@@ -30,8 +30,8 @@ const Layout = () => {
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      // setLoder(false);
-    }, 1000);
+      setLoder(false);
+    }, 3000);
     return () => clearTimeout(timeoutId);
   }, []);
 

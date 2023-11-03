@@ -10,7 +10,7 @@ function Items({ currentItems }) {
   return (
     <>
       {currentItems.map((item) => (
-        <div key={item._id} className="w-full cover-fill box">
+        <div key={item._id} className="w-full cover-fill">
           <Product
             _id={item._id}
             img={item.img[0]}

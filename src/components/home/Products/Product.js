@@ -22,9 +22,8 @@ const Product = (props) => {
   const productItem = props;
 
   const handleProductDetails = () => {
-    const filteredData= paginationItems.filter((a)=>a._id==_id)
+    const filteredData = paginationItems.filter((a) => a._id == _id);
     navigate(`/product/${rootId}`, {
-
       state: {
         item: filteredData,
       },

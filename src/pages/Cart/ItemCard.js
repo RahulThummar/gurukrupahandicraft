@@ -14,6 +14,7 @@ const ItemCard = ({ item }) => {
       <div className="flex col-span-5 mdl:col-span-2 items-center gap-4 ml-4">
         <ImCross
           onClick={() => dispatch(deleteItem(item._id))}
+          style={{ height: "20px", width: "20px" }}
           className="text-primeColor hover:text-red-500 duration-300 cursor-pointer"
         />
         <img className="w-32 h-32" src={item.image[0]} alt="productImage" />

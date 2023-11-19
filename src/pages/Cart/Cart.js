@@ -8,12 +8,12 @@ import { emptyCart } from "../../assets/images/index";
 import ItemCard from "./ItemCard";
 
 const Cart = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const products = useSelector((state) => state.orebiReducer.products);
   const [totalAmt, setTotalAmt] = useState("");
   const [shippingCharge, setShippingCharge] = useState("");
-  
+
   useEffect(() => {
     let price = 0;
     products.map((item) => {
@@ -22,6 +22,7 @@ const Cart = () => {
     });
     setTotalAmt(price);
   }, [products]);
+
   useEffect(() => {
     if (totalAmt <= 200) {
       setShippingCharge(30);
@@ -33,8 +34,8 @@ const Cart = () => {
   }, [totalAmt]);
 
   const handleClickProceedCheckOut = () => {
-      navigate("/paymentgateway", { state: { item: products } } )  
-  } 
+    navigate("/paymentgateway", { state: { item: products } });
+  };
   return (
     <div className="max-w-container mx-auto px-4">
       <Breadcrumbs title="Cart" />
@@ -85,9 +86,12 @@ const Cart = () => {
                 </p>
               </div>
               <div className="flex justify-end">
-                  <button onClick={()=>handleClickProceedCheckOut()} className="w-52 h-10 bg-primeColor text-white hover:bg-black duration-300">
-                    Proceed to Checkout
-                  </button>
+                <button
+                  onClick={() => handleClickProceedCheckOut()}
+                  className="w-52 h-10 bg-primeColor text-white hover:bg-black duration-300"
+                >
+                  Proceed to Checkout
+                </button>
               </div>
             </div>
           </div>

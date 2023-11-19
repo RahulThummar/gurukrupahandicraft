@@ -14,7 +14,7 @@ const SpecialCase = () => {
     }, 1000); // Adjust the duration as per your preference
 
     return () => clearTimeout(animationTimeout);
-  }, [products.length]);
+  }, [products]);
 
   return (
     <div className="fixed top-52 right-2 z-20 flex flex-col gap-2">

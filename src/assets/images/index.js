@@ -42,14 +42,6 @@ import pp1005 from "./products/specialOffer/pp1005.jpg";
 import ppp1005 from "./products/specialOffer/ppp1005.jpg";
 import pppp1005 from "./products/specialOffer/pppp1005.jpg";
 import p1006 from "./products/specialOffer/p1006.jpg";
-import p1007 from "./products/specialOffer/p1007.jpg";
-import p1008 from "./products/specialOffer/p1008.jpg";
-import p1009 from "./products/specialOffer/p1009.jpg";
-import p1010 from "./products/specialOffer/p1010.jpg";
-import p1011 from "./products/specialOffer/p1010.jpg";
-import p1012 from "./products/specialOffer/p1010.jpg";
-import p1013 from "./products/specialOffer/p1013.jpg";
-import p1014 from "./products/specialOffer/p1014.jpg";
 
 
 export {
@@ -60,14 +52,6 @@ export {
   p1004,pp1004,
   p1005,pp1005,ppp1005,pppp1005,
   p1006,
-  p1007,
-  p1008,
-  p1009,
-  p1010,
-  p1011,
-  p1012,
-  p1013,
-  p1014,
   
 
   

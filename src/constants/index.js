@@ -17,7 +17,7 @@ import {
   p1011,
   p1012,
   p1013,
-  p1014,
+  p1014, 
 } from "../assets/images/index";
 
 // =================== NavBarList Start here ====================
@@ -276,8 +276,8 @@ export const paginationItems = [
   {
     _id: 1009,
     img: [p1009],
-    productName: "Lotiset",
-    price: "2500.00",
+    productName: "Toran",
+    price: "3100.00",
     color: "Mixed",
     badge: false,
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
@@ -327,5 +327,6 @@ export const paginationItems = [
     badge: false,
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
+   
 ];
 // =================== PaginationItems End here =================

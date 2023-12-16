@@ -49,7 +49,7 @@ import p1010 from "./products/specialOffer/p1010.jpg";
 import p1011 from "./products/specialOffer/p1011.jpg";
 import p1012 from "./products/specialOffer/p1012.jpg";
 import p1013 from "./products/specialOffer/p1013.jpg";
-import p1014 from "./products/specialOffer/p1014.jpg";
+import p1014 from "./products/specialOffer/p1014.jpg"; 
 
 
 export {
@@ -67,7 +67,7 @@ export {
   p1011,
   p1012,
   p1013,
-  p1014,
+  p1014, 
   
 
   

@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { paginationItems } from "../../../constants";
 
-const HeaderBottom = () => { 
+const HeaderBottom = () => {
   const navigate = useNavigate();
 
   const products = useSelector((state) => state.orebiReducer.products);
@@ -41,13 +41,13 @@ const HeaderBottom = () => {
   }, [searchQuery]);
 
   const handleChangeproduct = (item) => {
-    navigate("/shop", { state: { item: item } } )                      
-  }
+    navigate("/shop", { state: { item: item } });
+  };
   const handlenavigate = (item) => {
-  navigate(`/product/${item._id}`, {state: { item: [item] }, } ) 
-  setShowSearchBar(true) 
-  setSearchQuery("")                  
-  }
+    navigate(`/product/${item._id}`, { state: { item: [item] } });
+    setShowSearchBar(true);
+    setSearchQuery("");
+  };
 
   return (
     <div className="w-full bg-[#F5F5F3] relative">
@@ -68,16 +68,24 @@ const HeaderBottom = () => {
                 transition={{ duration: 0.5 }}
                 className="absolute top-36 z-50 bg-primeColor w-auto text-[#767676] h-auto p-4 pb-6"
               >
-                <li onClick={()=> handleChangeproduct("Clock")}  className="text-gray-400 px-4 py-1 border-b-[1px] border-b-gray-400 hover:border-b-white hover:text-white duration-300 cursor-pointer">
-                  Wall Clock
+                <li
+                  onClick={() => handleChangeproduct("Lotiset")}
+                  className="text-gray-400 px-4 py-1 border-b-[1px] border-b-gray-400 hover:border-b-white hover:text-white duration-300 cursor-pointer"
+                >
+                  Lotiset
                 </li>
-                <li onClick={() => handleChangeproduct("Toran")} className="text-gray-400 px-4 py-1 border-b-[1px] border-b-gray-400 hover:border-b-white hover:text-white duration-300 cursor-pointer">
+                <li
+                  onClick={() => handleChangeproduct("Toran")}
+                  className="text-gray-400 px-4 py-1 border-b-[1px] border-b-gray-400 hover:border-b-white hover:text-white duration-300 cursor-pointer"
+                >
                   Toran
                 </li>
-                <li onClick={() => handleChangeproduct("Bajoth")} className="text-gray-400 px-4 py-1 border-b-[1px] border-b-gray-400 hover:border-b-white hover:text-white duration-300 cursor-pointer">
+                <li
+                  onClick={() => handleChangeproduct("Bajoth")}
+                  className="text-gray-400 px-4 py-1 border-b-[1px] border-b-gray-400 hover:border-b-white hover:text-white duration-300 cursor-pointer"
+                >
                   Bajoth
                 </li>
-                
               </motion.ul>
             )}
           </div>
@@ -97,13 +105,15 @@ const HeaderBottom = () => {
                 {searchQuery &&
                   filteredProducts.map((item) => (
                     <div
-                      onClick={() =>
-                      handlenavigate(item)
-                      }
+                      onClick={() => handlenavigate(item)}
                       key={item._id}
                       className="max-w-[600px] h-28 bg-gray-100 mb-3 flex items-center gap-3"
                     >
-                      <img className="w-24 object-fill" src={item.img[0]} alt="productImg" />
+                      <img
+                        className="w-24 object-fill"
+                        src={item.img[0]}
+                        alt="productImg"
+                      />
                       <div className="flex flex-col gap-1">
                         <p className="font-semibold text-lg">
                           {item.productName}

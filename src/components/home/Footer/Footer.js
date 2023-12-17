@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaFacebook, FaYoutube, FaLinkedin, FaGithub,FaInstagram , FaWhatsapp } from "react-icons/fa";
-import FooterListTitle from "./FooterListTitle"; 
-
+import {
+  FaFacebook,
+  FaYoutube,
+  FaLinkedin,
+  FaGithub,
+  FaInstagram,
+  FaWhatsapp,
+} from "react-icons/fa";
+import FooterListTitle from "./FooterListTitle";
 
 const Footer = () => {
   const [emailInfo, setEmailInfo] = useState("");
@@ -33,7 +39,8 @@ const Footer = () => {
           <FooterListTitle title=" More about Gurukrupa Handicraft" />
           <div className="flex flex-col gap-6">
             <p className="text-base w-full xl:w-[80%]">
-               Your one-stop destination for exquisite wedding materials, crafting essentials, and a world of creative possibilities.
+              Your one-stop destination for exquisite wedding materials,
+              crafting essentials, and a world of creative possibilities.
             </p>
             <ul className="flex items-center gap-2">
               <a
@@ -45,7 +52,7 @@ const Footer = () => {
                   <FaInstagram />
                 </li>
               </a>
-                <a
+              <a
                 href="https://wa.me/+919712107544"
                 target="_blank"
                 rel="noreferrer"
@@ -60,19 +67,19 @@ const Footer = () => {
         <div>
           <FooterListTitle title="Shop" />
           <ul className="flex flex-col gap-2">
-            <li  className="font-titleFont text-base text-lightText hover:text-black decoration-gray-500 underline-offset-2 duration-300">
-              Wall Clock
+            <li className="font-titleFont text-base text-lightText hover:text-black  decoration-[2px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300">
+              Lotiset
             </li>
-            <li className="font-titleFont text-base text-lightText hover:text-black decoration-gray-500 underline-offset-2 duration-300">
+            <li className="font-titleFont text-base text-lightText hover:text-black  decoration-[2px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300">
               Toran
             </li>
-            <li className="font-titleFont text-base text-lightText hover:text-black decoration-gray-500 underline-offset-2 duration-300">
+            <li className="font-titleFont text-base text-lightText hover:text-black  decoration-[2px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300">
               Bajoth
             </li>
-            <li className="font-titleFont text-base text-lightText hover:text-black decoration-gray-500 underline-offset-2 duration-300">
+            <li className="font-titleFont text-base text-lightText hover:text-black  decoration-[2px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300">
               khatli
             </li>
-            <li className="font-titleFont text-base text-lightText hover:text-black decoration-gray-500 underline-offset-2 duration-300">
+            <li className="font-titleFont text-base text-lightText hover:text-black  decoration-[2px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300">
               Moti & val & dal
             </li>
           </ul>
@@ -80,19 +87,19 @@ const Footer = () => {
         <div>
           <FooterListTitle title="Marriage Materials" />
           <ul className="flex flex-col gap-2">
-            <li className="font-titleFont text-base text-lightText hover:text-black decoration-gray-500 underline-offset-2 duration-300">
+            <li className="font-titleFont text-base text-lightText hover:text-black  decoration-[2px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300">
               Varmala
             </li>
-            <li className="font-titleFont text-base text-lightText hover:text-black decoration-gray-500 underline-offset-2 duration-300">
+            <li className="font-titleFont text-base text-lightText hover:text-black  decoration-[2px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300">
               Pithi
             </li>
-            <li className="font-titleFont text-base text-lightText hover:text-black decoration-gray-500 underline-offset-2 duration-300">
+            <li className="font-titleFont text-base text-lightText hover:text-black  decoration-[2px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300">
               Manek Stambh
             </li>
-            <li className="font-titleFont text-base text-lightText hover:text-black decoration-gray-500 underline-offset-2 duration-300">
+            <li className="font-titleFont text-base text-lightText hover:text-black  decoration-[2px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300">
               Kodiya
             </li>
-            <li className="font-titleFont text-base text-lightText hover:text-black decoration-gray-500 underline-offset-2 duration-300">
+            <li className="font-titleFont text-base text-lightText hover:text-black  decoration-[2px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300">
               Kankavati
             </li>
           </ul>
@@ -100,8 +107,7 @@ const Footer = () => {
         <div className="col-span-2 flex flex-col items-center w-full px-4">
           <FooterListTitle title="Subscribe to our newsletter." />
           <div className="w-full">
-            <p className="text-center mb-4">
-            </p>
+            <p className="text-center mb-4"></p>
             {subscription ? (
               <motion.p
                 initial={{ x: 20, opacity: 0 }}

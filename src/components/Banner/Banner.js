@@ -38,15 +38,15 @@ const Banner = () => {
           i === dotActive
             ? {
                 width: "30px",
-                color: "#262626",
-                borderRight: "3px #262626 solid",
+                color: "#fff",
+                borderRight: "3px #fff solid",
                 padding: "8px 0",
                 cursor: "pointer",
               }
             : {
                 width: "30px",
                 color: "transparent",
-                borderRight: "3px white solid",
+                borderRight: "3px black solid",
                 padding: "8px 0",
                 cursor: "pointer",
               }
@@ -100,24 +100,26 @@ const Banner = () => {
     ],
   };
   return (
-    <div className="w-full bg-white">
-      <Slider {...settings}>
-        <Link to="/offer">
-          <div>
-            <Image imgSrc={bannerImgOne} />
-          </div>
-        </Link>
-        <Link to="/offer">
-          <div>
-            <Image imgSrc={bannerImgTwo} />
-          </div>
-        </Link>
-        <Link to="/offer">
-          <div>
-            <Image imgSrc={bannerImgThree} />
-          </div>
-        </Link>
-      </Slider>
+    <div>
+      <div className="w-full bg-white">
+        <Slider {...settings}>
+          <Link to="/offer">
+            <div>
+              <Image imgSrc={bannerImgOne} className={"jk"} />
+            </div>
+          </Link>
+          <Link to="/offer">
+            <div>
+              <Image imgSrc={bannerImgTwo} className={"jk"} />
+            </div>
+          </Link>
+          <Link to="/offer">
+            <div>
+              <Image imgSrc={bannerImgThree} className={"jk"} />
+            </div>
+          </Link>
+        </Slider>
+      </div>
     </div>
   );
 };

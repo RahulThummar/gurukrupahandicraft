@@ -206,7 +206,6 @@ svg text {
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
 
-
 /* Add this CSS to your stylesheets or inline styles */
 @keyframes cartAnimation {
   0% {
@@ -227,3 +226,17 @@ svg text {
 }
 
 /* ============= NavLink active End here ================ */
+
+.img-header {
+  height: 120px;
+  width: 100%;
+  max-width: 100px;
+  object-fit: cover;
+}
+.main-search-qury {
+  padding: 12px 12px 2px;
+}
+.jk {
+  height: 400px;
+  width: 1400px;
+}

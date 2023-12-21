@@ -44,7 +44,7 @@ const Footer = () => {
             </p>
             <ul className="flex items-center gap-2">
               <a
-                href="https://www.instagram.com/gurukrupahandicrft1638/"
+                href="https://www.instagram.com/gurukrupahandicrft?igsh=MXJ0aXpkNWN3bjRuag=="
                 target="_blank"
                 rel="noreferrer"
               >

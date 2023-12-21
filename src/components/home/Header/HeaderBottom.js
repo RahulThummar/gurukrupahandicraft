@@ -100,9 +100,9 @@ const HeaderBottom = () => {
             <FaSearch className="w-5 h-5" />
             {searchQuery && (
               <div
-                className={`main-search-qury w-full mx-auto h-96 bg-white top-16 absolute left-0 z-50 overflow-y-scroll shadow-2xl scrollbar-hide cursor-pointer`}
+                className={`main-search-qury w-full mx-auto h-auto max-h-96 border-2 bg-white top-16 absolute left-0 z-50 overflow-y-scroll shadow-2xl scrollbar-hide cursor-pointer`}
               >
-                {searchQuery &&
+                {searchQuery && filteredProducts.length > 0 ? (
                   filteredProducts.map((item) => (
                     <div
                       onClick={() => handlenavigate(item)}
@@ -127,7 +127,10 @@ const HeaderBottom = () => {
                         </p>
                       </div>
                     </div>
-                  ))}
+                  ))
+                ) : (
+                  <div className="pb-1">No product found.</div>
+                )}
               </div>
             )}
           </div>

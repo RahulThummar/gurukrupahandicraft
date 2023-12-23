@@ -179,6 +179,7 @@ svg text {
   transform: translateY(0%);
 }
 
+
 @media (max-width: 1200px) {
   svg text {
     font-size: 60px !important;

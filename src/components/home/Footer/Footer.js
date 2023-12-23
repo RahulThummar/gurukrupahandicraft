@@ -9,8 +9,10 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import FooterListTitle from "./FooterListTitle";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
   const [emailInfo, setEmailInfo] = useState("");
   const [subscription, setSubscription] = useState(false);
   const [errMsg, setErrMsg] = useState("");
@@ -32,6 +34,11 @@ const Footer = () => {
       setEmailInfo("");
     }
   };
+
+  const handleChangeproduct = (item) => {
+    navigate("/shop", { state: { item: item } });
+  };
+
   return (
     <div className="w-full bg-[#F5F5F3] py-20">
       <div className="max-w-container mx-auto grid grid-cols-1 md:grid-cols-2  xl:grid-cols-6 px-4 gap-10">
@@ -67,39 +74,69 @@ const Footer = () => {
         <div>
           <FooterListTitle title="Shop" />
           <ul className="flex flex-col gap-2">
-            <li className="font-titleFont text-base text-lightText hover:text-black  decoration-[2px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300">
+            <li
+              onClick={() => handleChangeproduct("Lotiset")}
+              className="font-titleFont text-base text-lightText hover:text-black  decoration-[2px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300"
+            >
               Lotiset
             </li>
-            <li className="font-titleFont text-base text-lightText hover:text-black  decoration-[2px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300">
+            <li
+              onClick={() => handleChangeproduct("Toran")}
+              className="font-titleFont text-base text-lightText hover:text-black  decoration-[2px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300"
+            >
               Toran
             </li>
-            <li className="font-titleFont text-base text-lightText hover:text-black  decoration-[2px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300">
+            <li
+              onClick={() => handleChangeproduct("Bajoth")}
+              className="font-titleFont text-base text-lightText hover:text-black  decoration-[2px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300"
+            >
               Bajoth
             </li>
-            <li className="font-titleFont text-base text-lightText hover:text-black  decoration-[2px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300">
-              khatli
+            <li
+              onClick={() => handleChangeproduct("Khatli")}
+              className="font-titleFont text-base text-lightText hover:text-black  decoration-[2px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300"
+            >
+              Khatli
             </li>
-            <li className="font-titleFont text-base text-lightText hover:text-black  decoration-[2px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300">
-              Moti & val & dal
+            <li
+              onClick={() => handleChangeproduct("Moti")}
+              className="font-titleFont text-base text-lightText hover:text-black  decoration-[2px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300"
+            >
+              Moti
             </li>
           </ul>
         </div>
         <div>
           <FooterListTitle title="Marriage Materials" />
           <ul className="flex flex-col gap-2">
-            <li className="font-titleFont text-base text-lightText hover:text-black  decoration-[2px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300">
+            <li
+              onClick={() => handleChangeproduct("Varmala")}
+              className="font-titleFont text-base text-lightText hover:text-black  decoration-[2px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300"
+            >
               Varmala
             </li>
-            <li className="font-titleFont text-base text-lightText hover:text-black  decoration-[2px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300">
+            <li
+              onClick={() => handleChangeproduct("Pithi")}
+              className="font-titleFont text-base text-lightText hover:text-black  decoration-[2px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300"
+            >
               Pithi
             </li>
-            <li className="font-titleFont text-base text-lightText hover:text-black  decoration-[2px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300">
+            <li
+              onClick={() => handleChangeproduct("Manek Stambh")}
+              className="font-titleFont text-base text-lightText hover:text-black  decoration-[2px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300"
+            >
               Manek Stambh
             </li>
-            <li className="font-titleFont text-base text-lightText hover:text-black  decoration-[2px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300">
+            <li
+              onClick={() => handleChangeproduct("Kodiya")}
+              className="font-titleFont text-base text-lightText hover:text-black  decoration-[2px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300"
+            >
               Kodiya
             </li>
-            <li className="font-titleFont text-base text-lightText hover:text-black  decoration-[2px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300">
+            <li
+              onClick={() => handleChangeproduct("Kankavati")}
+              className="font-titleFont text-base text-lightText hover:text-black  decoration-[2px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300"
+            >
               Kankavati
             </li>
           </ul>

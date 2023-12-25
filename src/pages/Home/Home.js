@@ -14,7 +14,7 @@ const Home = () => {
         <Sale />
         <NewArrivals />
         <BestSellers />
-        <YearProduct />
+        {/* <YearProduct /> */}
         <SpecialOffers />
       </div>
     </div>

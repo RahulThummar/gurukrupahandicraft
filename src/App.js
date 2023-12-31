@@ -24,6 +24,8 @@ import Offer from "./pages/Offer/Offer";
 import Payment from "./pages/payment/Payment";
 import ProductDetails from "./pages/ProductDetails/ProductDetails";
 import Shop from "./pages/Shop/Shop";
+import ReactGA from "react-ga";
+ReactGA.initialize("G-WBGDL6WD55");
 
 const Layout = () => {
   const [loder, setLoder] = useState(true);

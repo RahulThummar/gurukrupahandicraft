@@ -17,7 +17,7 @@ import {
   p1011,
   p1012,
   p1013,
-  p1014, 
+  p1014,
 } from "../assets/images/index";
 
 // =================== NavBarList Start here ====================
@@ -85,6 +85,15 @@ export const SplOfferData = [
 ];
 export const bestSellerData = [
   {
+    _id: 1014,
+    img: [p1014],
+    productName: "Lotiset",
+    price: "500.00",
+    color: "Mixed",
+    badge: false,
+    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
+  },
+  {
     _id: 1001,
     img: [p1001],
     productName: "Supdu",
@@ -103,50 +112,62 @@ export const bestSellerData = [
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
-    _id: 1003,
-    img: [p1003],
-    productName: "Laganyu",
-    price: "120.00",
+    _id: 1006,
+    img: [p1006],
+    productName: "Sathiyo",
+    price: "50.00",
     color: "Red",
     badge: false,
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
-  },
-  {
-    _id: 1004,
-    img: [p1004, pp1004],
-    productName: "Laganyu (File)",
-    price: "150.00",
-    color: "Red",
-    badge: true,
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
 ];
 
 export const newArrivalData = [
   {
-    _id: 1001,
-    img: [p1001],
-    productName: "Supdu",
-    price: "150.00",
+    _id: 1005,
+    img: [pppp1005, pp1005, ppp1005, p1005],
+    productName: "Lotiset",
+    price: "720.00",
     color: "Green",
-    badge: false,
+    badge: true,
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
+
   {
-    _id: 1002,
-    img: [p1002, pp1002],
-    productName: "Topli",
-    price: "150.00",
+    _id: 1007,
+    img: [p1007],
+    productName: "Lotiset",
+    price: "2500.00",
     color: "Mixed",
     badge: false,
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
+
   {
     _id: 1003,
     img: [p1003],
     productName: "Laganyu",
     price: "120.00",
     color: "Red",
+    badge: false,
+    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
+  },
+  {
+    _id: 1009,
+    img: [p1009],
+    productName: "Toran",
+    price: "3100.00",
+    color: "Mixed",
+    badge: false,
+    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
+  },
+
+  {
+    _id: 1002,
+    img: [p1002, pp1002],
+    productName: "Topli",
+    price: "150.00",
+    color: "Mixed",
     badge: false,
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
@@ -160,39 +181,12 @@ export const newArrivalData = [
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
-    _id: 1001,
-    img: [p1001],
-    productName: "Supdu",
-    price: "150.00",
-    color: "Green",
-    badge: false,
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
-  },
-  {
-    _id: 1002,
-    img: [p1002, pp1002],
-    productName: "Topli",
-    price: "150.00",
-    color: "Mixed",
-    badge: false,
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
-  },
-  {
-    _id: 1003,
-    img: [p1003],
-    productName: "Laganyu",
-    price: "120.00",
+    _id: 1006,
+    img: [p1006],
+    productName: "Sathiyo",
+    price: "50.00",
     color: "Red",
     badge: false,
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
-  },
-  {
-    _id: 1004,
-    img: [p1004, pp1004],
-    productName: "Laganyu (File)",
-    price: "150.00",
-    color: "Red",
-    badge: true,
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
 ];
@@ -327,6 +321,5 @@ export const paginationItems = [
     badge: false,
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
-   
 ];
 // =================== PaginationItems End here =================

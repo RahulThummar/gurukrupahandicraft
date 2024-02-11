@@ -61,6 +61,7 @@ import p1022 from "./products/specialOffer/p1022.jpg";
 import p1023 from "./products/specialOffer/p1023.jpg";  
 import p1024 from "./products/specialOffer/p1024.jpg";  
 import p1025 from "./products/specialOffer/p1025.jpg";  
+import p1026 from "./products/specialOffer/p1026.jpg";  
 
 
 
@@ -96,6 +97,7 @@ export {
   p1023,
   p1024,
   p1025,
+  p1026,
 
   // -------------
   logo,

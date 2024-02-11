@@ -29,6 +29,7 @@ import {
   p1023,
   p1024,
   p1025,
+  p1026,
 } from "../assets/images/index";
 
 // =================== NavBarList Start here ====================
@@ -428,6 +429,15 @@ export const paginationItems = [
     productName: "Rumal",
     price: "700.00",
     color: "Mixed",
+    badge: false,
+    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
+  },
+  {
+    _id: 1026,
+    img: [p1026],
+    productName: "Toran (3 fit)",
+    price: "1900.00",
+    color: "white",
     badge: false,
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },

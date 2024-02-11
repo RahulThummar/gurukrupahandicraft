@@ -116,10 +116,10 @@ const Footer = () => {
               Varmala
             </li>
             <li
-              onClick={() => handleChangeproduct("Pithi")}
+              onClick={() => handleChangeproduct("Haldi")}
               className="font-titleFont text-base text-lightText hover:text-black  decoration-[2px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300"
             >
-              Pithi
+              Haldi
             </li>
             <li
               onClick={() => handleChangeproduct("Manek Stambh")}

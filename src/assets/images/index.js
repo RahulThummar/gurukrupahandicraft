@@ -62,8 +62,9 @@ import p1023 from "./products/specialOffer/p1023.jpg";
 import p1024 from "./products/specialOffer/p1024.jpg";  
 import p1025 from "./products/specialOffer/p1025.jpg";  
 import p1026 from "./products/specialOffer/p1026.jpg";  
-
-
+import p1027 from "./products/specialOffer/p1027.jpg";  
+import p1028 from "./products/specialOffer/p1028.jpg";  
+import p1029 from "./products/specialOffer/p1029.jpg";  
 
 export {
   // product list
@@ -98,6 +99,9 @@ export {
   p1024,
   p1025,
   p1026,
+  p1027,
+  p1028,
+  p1029,
 
   // -------------
   logo,

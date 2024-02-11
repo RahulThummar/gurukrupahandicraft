@@ -52,7 +52,7 @@ const ProductDetails = () => {
 
               <div className="h-full xl:col-span-2" onClick={() => openModal()}>
                 <img
-                  className="w-full h-full object-fill cursor-pointer"
+                  className="w-full h-full object-contain cursor-pointer"
                   src={productInfo[0].img[0]}
                   alt={productInfo[0].img[0]}
                 />
@@ -96,7 +96,7 @@ const ProductDetails = () => {
             style={{ borderRadius: "10px", overflow: "hidden" }}
           >
             <img
-              className="w-full h-full object-fill cursor-pointer"
+              className="w-full h-full object-contain cursor-pointer"
               src={productInfo[0].img[0]}
               alt={productInfo[0].img[0]}
               style={{ borderRadius: "10px" }}

@@ -45,7 +45,7 @@ const ProductsOnSale = (props) => {
   >
     <div className="w-[450px] h-[500px] p-4" style={{ borderRadius: '10px', overflow: 'hidden' }}>
       <img
-        className="w-full h-full object-fill cursor-pointer"
+        className="w-full h-full object-contain cursor-pointer"
         src={imgPath}
         alt={imgPath}
         style={{ borderRadius: '10px' }}

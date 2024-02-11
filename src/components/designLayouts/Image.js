@@ -10,14 +10,16 @@ const Image = ({ imgSrc, className }) => {
   };
 
   return (
-    <div style={{ position: 'relative' }}>
-      {loading && <Skeleton width="100%" height="100%" style={{ position: 'absolute' }} />}
+    <div style={{ position: "relative" }}>
+      {loading && (
+        <Skeleton width="100%" height="100%" style={{ position: "absolute" }} />
+      )}
       <img
         className={className}
         src={imgSrc}
         alt={imgSrc}
         onLoad={handleImageLoad}
-        style={{ display: loading ? 'none' : 'block' }}
+        style={{ display: loading ? "none" : "block" }}
       />
     </div>
   );

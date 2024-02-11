@@ -50,15 +50,32 @@ import p1011 from "./products/specialOffer/p1011.jpg";
 import p1012 from "./products/specialOffer/p1012.jpg";
 import p1013 from "./products/specialOffer/p1013.jpg";
 import p1014 from "./products/specialOffer/p1014.jpg"; 
+import p1015 from "./products/specialOffer/p1015.jpg"; 
+import p1016 from "./products/specialOffer/p1016.jpg"; 
+import p1017 from "./products/specialOffer/p1017.jpg"; 
+import p1018 from "./products/specialOffer/p1018.jpg"; 
+import p1019 from "./products/specialOffer/p1019.jpg"; 
+import p1020 from "./products/specialOffer/p1020.jpg";  
+import p1021 from "./products/specialOffer/p1021.jpg";  
+import p1022 from "./products/specialOffer/p1022.jpg";  
+import p1023 from "./products/specialOffer/p1023.jpg";  
+import p1024 from "./products/specialOffer/p1024.jpg";  
+import p1025 from "./products/specialOffer/p1025.jpg";  
+
 
 
 export {
   // product list
   p1001,
-  p1002,pp1002,
+  p1002,
+  pp1002,
   p1003,
-  p1004,pp1004,
-  p1005,pp1005,ppp1005,pppp1005,
+  p1004,
+  pp1004,
+  p1005,
+  pp1005,
+  ppp1005,
+  pppp1005,
   p1006,
   p1007,
   p1008,
@@ -67,14 +84,20 @@ export {
   p1011,
   p1012,
   p1013,
-  p1014, 
-  
+  p1014,
+  p1015,
+  p1016,
+  p1017,
+  p1018,
+  p1019,
+  p1020,
+  p1021,
+  p1022,
+  p1023,
+  p1024,
+  p1025,
 
-  
-  
-  
   // -------------
-
   logo,
   logoLight,
   bannerImgOne,

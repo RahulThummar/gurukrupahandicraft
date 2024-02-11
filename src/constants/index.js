@@ -447,7 +447,7 @@ export const paginationItems = [
   {
     _id: 1027,
     img: [p1027],
-    productName: "Mandir Toran (19 In)",
+    productName: "Toran (Mandir) (19 In)",
     price: "360.00",
     color: "white",
     badge: false,
@@ -456,7 +456,7 @@ export const paginationItems = [
   {
     _id: 1028,
     img: [p1028],
-    productName: "Mandir Toran (17 In)",
+    productName: "Toran (Mandir) (17 In)",
     price: "420.00",
     color: "white",
     badge: false,
@@ -465,7 +465,7 @@ export const paginationItems = [
   {
     _id: 1029,
     img: [p1029],
-    productName: "Mandir Toran (17 In)",
+    productName: "Toran (Mandir) (17 In)",
     price: "400.00",
     color: "white",
     badge: false,

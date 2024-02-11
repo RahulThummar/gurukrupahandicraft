@@ -15,6 +15,7 @@ const Image = ({ imgSrc, className }) => {
         <Skeleton width="100%" height="100%" style={{ position: "absolute" }} />
       )}
       <img
+      
         className={className}
         src={imgSrc}
         alt={imgSrc}

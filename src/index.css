@@ -179,7 +179,6 @@ svg text {
   transform: translateY(0%);
 }
 
-
 @media (max-width: 1200px) {
   svg text {
     font-size: 60px !important;
@@ -236,4 +235,10 @@ svg text {
 }
 .main-search-qury {
   padding: 12px 12px 2px;
-} 
+}
+
+.product-list-img-size {
+  height: 370px;
+  width: 370px;
+  object-fit: contain;
+}

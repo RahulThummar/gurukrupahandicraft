@@ -33,6 +33,9 @@ import {
   p1027,
   p1028,
   p1029,
+  p1030,
+  p1031,
+  p1032,
 } from "../assets/images/index";
 
 // =================== NavBarList Start here ====================
@@ -468,6 +471,33 @@ export const paginationItems = [
     productName: "Toran (Mandir) (17 In)",
     price: "400.00",
     color: "white",
+    badge: false,
+    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
+  },
+  {
+    _id: 1030,
+    img: [p1030],
+    productName: "Toran",
+    price: "1400.00",
+    color: "Mixed",
+    badge: false,
+    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
+  },
+  {
+    _id: 1031,
+    img: [p1031],
+    productName: "Toran",
+    price: "1350.00",
+    color: "Mixed",
+    badge: false,
+    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
+  },
+  {
+    _id: 1032,
+    img: [p1032],
+    productName: "Toran",
+    price: "1200.00",
+    color: "Mixed",
     badge: false,
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },

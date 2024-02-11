@@ -30,7 +30,7 @@ import productOfTheYear from "./products/productOfTheYear.webp";
 // ============== Products End here ======================
 import paymentCard from "./payment.png";
 import emptyCart from "../images/emptyCart.png";
-// prodyucts
+// prodyucts 
 import p1001 from "./products/specialOffer/p1001.webp";
 import p1002 from "./products/specialOffer/p1002.jpg";
 import pp1002 from "./products/specialOffer/pp1002.jpg";
@@ -49,22 +49,25 @@ import p1010 from "./products/specialOffer/p1010.jpg";
 import p1011 from "./products/specialOffer/p1011.jpg";
 import p1012 from "./products/specialOffer/p1012.jpg";
 import p1013 from "./products/specialOffer/p1013.jpg";
-import p1014 from "./products/specialOffer/p1014.jpg"; 
-import p1015 from "./products/specialOffer/p1015.jpg"; 
-import p1016 from "./products/specialOffer/p1016.jpg"; 
-import p1017 from "./products/specialOffer/p1017.jpg"; 
-import p1018 from "./products/specialOffer/p1018.jpg"; 
-import p1019 from "./products/specialOffer/p1019.jpg"; 
-import p1020 from "./products/specialOffer/p1020.jpg";  
-import p1021 from "./products/specialOffer/p1021.jpg";  
-import p1022 from "./products/specialOffer/p1022.jpg";  
-import p1023 from "./products/specialOffer/p1023.jpg";  
-import p1024 from "./products/specialOffer/p1024.jpg";  
-import p1025 from "./products/specialOffer/p1025.jpg";  
-import p1026 from "./products/specialOffer/p1026.jpg";  
-import p1027 from "./products/specialOffer/p1027.jpg";  
-import p1028 from "./products/specialOffer/p1028.jpg";  
-import p1029 from "./products/specialOffer/p1029.jpg";  
+import p1014 from "./products/specialOffer/p1014.jpg";
+import p1015 from "./products/specialOffer/p1015.jpg";
+import p1016 from "./products/specialOffer/p1016.jpg";
+import p1017 from "./products/specialOffer/p1017.jpg";
+import p1018 from "./products/specialOffer/p1018.jpg";
+import p1019 from "./products/specialOffer/p1019.jpg";
+import p1020 from "./products/specialOffer/p1020.jpg";
+import p1021 from "./products/specialOffer/p1021.jpg";
+import p1022 from "./products/specialOffer/p1022.jpg";
+import p1023 from "./products/specialOffer/p1023.jpg";
+import p1024 from "./products/specialOffer/p1024.jpg";
+import p1025 from "./products/specialOffer/p1025.jpg";
+import p1026 from "./products/specialOffer/p1026.jpg";
+import p1027 from "./products/specialOffer/p1027.jpg";
+import p1028 from "./products/specialOffer/p1028.jpg";
+import p1029 from "./products/specialOffer/p1029.jpg";
+import p1030 from "./products/specialOffer/p1030.jpg";
+import p1031 from "./products/specialOffer/p1031.jpg";
+import p1032 from "./products/specialOffer/p1032.jpg";
 
 export {
   // product list
@@ -102,6 +105,9 @@ export {
   p1027,
   p1028,
   p1029,
+  p1030,
+  p1031,
+  p1032,
 
   // -------------
   logo,
